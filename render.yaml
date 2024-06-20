@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: code-server
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PASSWORD
+        value: root
+    autoDeploy: true
+    buildCommand: ""
+    startCommand: ""
+    healthCheckPath: "/"
+    openPorts:
+      - 8080
