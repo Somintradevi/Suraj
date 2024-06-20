@@ -14,5 +14,5 @@ RUN echo "coder ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/nopasswd
 # Expose the port Code Server runs on
 EXPOSE 8080
 
-# Start Code Server
-CMD ["code-server", "--bind-addr", "0.0.0.0:8080", "--auth", "password"]
+# Start Code Server without authentication
+CMD ["code-server", "--bind-addr", "0.0.0.0:8080", "--auth", "none"]
